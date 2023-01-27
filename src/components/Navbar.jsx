@@ -68,14 +68,32 @@ const MainNav = styled.nav`
   align-items: center;
 `;
 
-const Menu = styled.ul`
-  display: flex;
+const MenuItemWrapper = styled.span`
+  position: relative;
+  margin-right: 30px;
 `;
 
-const MenuItem = styled.li`
-  list-style-type: none;
-  margin-right: 30px;
+const MenuItem = styled.a`
+  text-decoration: none;
   cursor: pointer;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background-color: #1c1c1c;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s;
+  }
+  &:hover {
+    &:after {
+      transform-origin: bottom left;
+      transform: scaleX(1);
+    }
+  }
 `;
 
 const RightNav = styled.div`
@@ -120,11 +138,15 @@ const Navbar = () => {
           <Logo>F_DESIGN</Logo>
         </LeftNav>
         <MainNav>
-          <Menu>
-            <MenuItem>HOME</MenuItem>
-            <MenuItem>SHOP</MenuItem>
-            <MenuItem>MAGAZINE</MenuItem>
-          </Menu>
+          <MenuItemWrapper>
+            <MenuItem href="#">HOME</MenuItem>
+          </MenuItemWrapper>
+          <MenuItemWrapper>
+            <MenuItem href="#">SHOP</MenuItem>
+          </MenuItemWrapper>
+          <MenuItemWrapper>
+            <MenuItem href="#">MAGAZINE</MenuItem>
+          </MenuItemWrapper>
         </MainNav>
         <RightNav>
           <Language>EN</Language>

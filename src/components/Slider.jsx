@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 const Arrow = styled.div`
   width: 60px;
   height: 60px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@ const WrapperSlide = styled.div`
   width: 100%;
   display: flex;
   transform: translateX(${(props) => props.slideIndex * -1280}px);
-  transition: all 1s ease;
+  transition: all 1.5s ease;
 `;
 
 const Slide = styled.div`
@@ -49,9 +49,8 @@ const Slide = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  flex: 2;  
-  overflow: hidden;
-  background-color: red;
+  flex: 2;
+  overflow: hidden;  
 `;
 
 const Image = styled.img`
@@ -91,14 +90,14 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
-  const [slideIndex, setSlideIndex] = useState(1);
-  console.log(slideIndex)
+  const [slideIndex, setSlideIndex] = useState(0);
 
   const handleClick = (direction) => {
+    if (direction === 'right') {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
     if (direction === 'left') {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
-    } else {
-      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
   };
 
@@ -124,7 +123,7 @@ const Slider = () => {
             </Slide>
           ))}
         </WrapperSlide>
-        <Arrow direction="right" onClick={() => handleClick('left')}>
+        <Arrow direction="right" onClick={() => handleClick('right')}>
           <KeyboardArrowRightOutlinedIcon />
         </Arrow>
       </Wrapper>
