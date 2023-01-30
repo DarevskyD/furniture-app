@@ -36,11 +36,9 @@ const Title = styled.h2`
 `;
 
 const Button = styled.button`
-  border: none;
   padding: 10px;
   font-weight: 500;
-  border-color: #c7c9cb;
-  cursor: pointer;
+  border: 1px solid #ffffff;  
 `;
 
 const CategoryItem = ({ item }) => {

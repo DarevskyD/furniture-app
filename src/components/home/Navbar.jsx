@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   height: 70px;
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 20px;
 `;
 
@@ -75,6 +75,7 @@ const MenuItemWrapper = styled.span`
 
 const MenuItem = styled.a`
   text-decoration: none;
+  color: #1c1c1c;
   cursor: pointer;
   &:after {
     content: '';

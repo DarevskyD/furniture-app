@@ -5,9 +5,9 @@ const Container = styled.div`
   background-color: #1C1C1C;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div`  
   max-width: 1280px;
-  margin: auto;
+  margin: 0 auto;
   padding: 10px 0;
   text-align: center;
 `;

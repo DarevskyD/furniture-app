@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
 
-const Container = styled.div`
+const Container = styled.section`
   width: 100%;
   padding: 10px 0;
 `;
@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   align-items: center;
   max-width: 1280px;
   height: 55px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 20px;
 `;
 

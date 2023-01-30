@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import { products } from '../data';
+import { products } from '../../data';
 import Product from './Product';
 
-const Container = styled.div`
+const Container = styled.section`
   width: 100%;
 `;
 
 const Wrapper = styled.div`
   max-width: 1280px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

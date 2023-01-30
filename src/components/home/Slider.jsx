@@ -2,16 +2,16 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
 import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
-import { sliderItems } from '../data';
+import { sliderItems } from '../../data';
 
-const Container = styled.div`
+const Container = styled.section`
   width: 100%;
 `;
 
 const Wrapper = styled.div`
   max-width: 1280px;
   height: 100vh;
-  margin: auto;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
 `;
@@ -50,7 +50,7 @@ const Slide = styled.div`
 
 const ImgContainer = styled.div`
   flex: 2;
-  overflow: hidden;  
+  overflow: hidden;
 `;
 
 const Image = styled.img`
@@ -85,8 +85,7 @@ const Text = styled.p`
 const Button = styled.button`
   padding: 10px;
   font-size: 30px;
-  background-color: transparent;
-  cursor: pointer;
+  border: 1px solid #1c1c1c;
 `;
 
 const Slider = () => {
