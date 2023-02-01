@@ -1,18 +1,8 @@
-import styled from 'styled-components';
-import { products } from '../../data';
 import Product from './Product';
+import { Container } from '../../styles/Container.styled';
+import { Wrapper } from '../../styles/home/Products.styled';
 
-const Container = styled.section`
-  width: 100%;
-`;
-
-const Wrapper = styled.div`
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-`;
+import { products } from '../../data';
 
 const Products = () => {
   return (

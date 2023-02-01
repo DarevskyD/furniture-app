@@ -1,31 +1,13 @@
 export const theme = {
   colors: {
-    primary: '#FAFAFA',
-    secondary: '#FFC80A',
-    tertiary: '#303030',
-    background: '#ffffff',
-    text: '#000000',
-    primaryTextColor: '#594F43',
-    secondaryTextColor: '#777777',
-    inputPlaceholder: '#C7C7C7',
-    darkGrayText: '#303030',
-    darkText: '#1A1A1A',
-    black: '#000000',
-    white: '#ffffff',
-    dark: '',
-    medium: '',
-    light: '',
-    danger: '',
-    success: '#66A15A',
+    primary: '#1c1c1c',
+    light: '#ffffff',
+    secondary: '#8d8d8d',
+    tertiary: '#ebe9e9',
+    overlay: 'rgba(165, 165, 165, 0.3)',
+    secOverlay: 'rgba(0, 0, 0, 0.3)',
   },
   fonts: {
-    poppins: 'Anek Malayalam',
-  },
-  paddings: {
-    container: '15px',
-    pageTop: '30px',
-  },
-  margins: {
-    pageTop: '30px',
+    urbanist: 'Urbanist',
   },
 };

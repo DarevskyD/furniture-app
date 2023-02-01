@@ -15,7 +15,11 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Urbanist', sans-serif;
+  font-family: ${({ theme }) => theme.fonts.urbanist}, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: ${({ theme }) => theme.colors.primary};
 }
 
 h1,

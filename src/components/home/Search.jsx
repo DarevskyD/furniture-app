@@ -1,40 +1,11 @@
-import styled from 'styled-components';
 import SearchIcon from '@mui/icons-material/Search';
 
-const Container = styled.section`
-  width: 100%;
-  padding: 10px 0;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  max-width: 1280px;
-  height: 55px;
-  margin: 0 auto;
-  padding: 0 20px;
-`;
-
-const SearchContainer = styled.div`
-  display: flex;
-  align-items: center;
-  width: 60%;
-`;
-
-const Input = styled.input`
-  width: 100%;
-  padding: 0 20px;
-  margin-left: 10px;
-  font-size: 18px;
-  font-style: italic;
-  border: none;
-  border-bottom: 1px solid lightgray;
-  outline: none;
-`;
+import { Container } from '../../styles/Container.styled';
+import { Wrapper, SearchContainer, Input } from '../../styles/home/Search.styled';
 
 const Search = () => {
   return (
-    <Container>
+    <Container padding={'10px 0'}>
       <Wrapper>
         <SearchContainer>
           <SearchIcon sx={{ fontSize: '30px' }} />
