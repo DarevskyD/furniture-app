@@ -6,7 +6,7 @@ import { categories } from '../../data';
 
 const Categories = () => {
   return (
-    <Container padding={'30px 0'}>
+    <Container padding='30px 0'>
       <Wrapper>
         {categories.map((item) => (
           <CategoryItem key={item.id} item={item} />

@@ -1,19 +1,25 @@
 import Announcement from '../components/home/Announcement';
 import Categories from '../components/home/Categories';
-import Navbar from '../components/home/Navbar';
+import Header from '../components/home/Header';
 import Search from '../components/home/Search';
 import Slider from '../components/home/Slider';
-import Products from '../components/home/Products';
+import ProductsList from '../components/home/ProductsList';
+import Newsletter from '../components/home/Newsletter';
+import Footer from '../components/home/Footer';
 
 const Home = () => {
   return (
     <>
       <Announcement />
-      <Navbar />
-      <Search />
-      <Slider />
-      <Categories />
-      <Products />
+      <Header />
+      <main>
+        <Search />
+        <Slider />
+        <Categories />
+        <ProductsList />
+        <Newsletter />
+      </main>
+      <Footer />
     </>
   );
 };

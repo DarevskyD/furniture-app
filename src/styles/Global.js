@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 body {

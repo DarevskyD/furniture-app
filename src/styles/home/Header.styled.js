@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 import { size } from '../BreakPoints';
+import { theme } from '../Theme';
+
+export const Container = styled.header`
+  width: 100%;
+  background-color: ${({ scrolled }) => (scrolled ? theme.colors.middleBg : theme.colors.light)};
+  position: ${({ scrolled }) => (scrolled ? 'sticky' : null)};
+  box-shadow: ${({ scrolled }) => (scrolled ? 'rgba(0, 0, 0, 0.45) 0px 0px 15px 0px' : 'none')};
+  top: 0;
+  z-index: 10;
+  transition: all 1.5s ease;
+`;
 
 export const Wrapper = styled.div`
   max-width: ${size.lg};

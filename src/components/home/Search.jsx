@@ -5,7 +5,7 @@ import { Wrapper, SearchContainer, Input } from '../../styles/home/Search.styled
 
 const Search = () => {
   return (
-    <Container padding={'10px 0'}>
+    <Container padding='10px 0'>
       <Wrapper>
         <SearchContainer>
           <SearchIcon sx={{ fontSize: '30px' }} />

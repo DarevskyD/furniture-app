@@ -1,9 +1,10 @@
+import { useState, useEffect } from 'react';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import { Container } from '../../styles/Container.styled';
 import Hamburger from './Hamburger';
 import {
+  Container,
   Wrapper,
   LeftNav,
   Logo,
@@ -15,11 +16,23 @@ import {
   Registration,
   RegistrationItem,
   Cart,
-} from '../../styles/home/Navbar.styled';
+} from '../../styles/home/Header.styled';
 
-const Navbar = () => {
+const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    window.onscroll = function () {
+      if (window.scrollY > 36) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+  }, []);
+
   return (
-    <Container>
+    <Container scrolled={scrolled}>
       <Wrapper>
         <LeftNav>
           <Hamburger />
@@ -43,8 +56,15 @@ const Navbar = () => {
             <RegistrationItem>LOGIN</RegistrationItem>
           </Registration>
           <Cart>
-            <Badge badgeContent={1} color="primary">
-              <ShoppingCartOutlinedIcon color="action" />
+            <Badge
+              badgeContent={1}
+              sx={{
+                '& .MuiBadge-badge': {
+                  color: '#ffffff',
+                  backgroundColor: '#ff5a5a',
+                },
+              }}>
+              <ShoppingCartOutlinedIcon />
             </Badge>
           </Cart>
         </RightNav>
@@ -53,4 +73,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;

@@ -3,7 +3,7 @@ import { size } from '../BreakPoints';
 
 export const Wrapper = styled.div`
   max-width: ${size.lg};
-  height: 100vh;
+  height: calc(100vh - 70px);
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -25,7 +25,7 @@ export const Arrow = styled.div`
   margin: auto;
   opacity: 0.5;
   cursor: pointer;
-  z-index: 100;
+  z-index: 5;
 `;
 
 export const WrapperSlide = styled.div`
