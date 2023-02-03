@@ -1,4 +1,4 @@
-import Product from './Product';
+import ProductItem from './ProductItem';
 import { Container } from '../../styles/Container.styled';
 import { Wrapper } from '../../styles/home/ProductsList.styled';
 
@@ -9,7 +9,7 @@ const ProductsList = () => {
     <Container padding={'0 0 30px'}>
       <Wrapper>
         {products.map((product) => (
-          <Product key={product.id} product={product} />
+          <ProductItem key={product.id} product={product} />
         ))}
       </Wrapper>
     </Container>

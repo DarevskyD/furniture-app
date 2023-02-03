@@ -2,9 +2,9 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
-import { Info, Container, Image, Icon } from '../../styles/home/Product.styled';
+import { Info, Container, Image, Icon } from '../../styles/home/ProductItem.styled';
 
-const Product = ({ product }) => {
+const ProductItem = ({ product }) => {
   const { img } = product;
   return (
     <Container>
@@ -24,4 +24,4 @@ const Product = ({ product }) => {
   );
 };
 
-export default Product;
+export default ProductItem;
