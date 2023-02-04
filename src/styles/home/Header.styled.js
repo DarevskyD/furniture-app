@@ -4,9 +4,12 @@ import { theme } from '../Theme';
 
 export const Container = styled.header`
   width: 100%;
-  background-color: ${({ scrolled }) => (scrolled ? theme.colors.middleBg : theme.colors.light)};
+  background-color: ${({ scrolled }) => (scrolled ? theme.colors.lightBg : theme.colors.light)};
   position: ${({ scrolled }) => (scrolled ? 'sticky' : null)};
-  box-shadow: ${({ scrolled }) => (scrolled ? 'rgba(0, 0, 0, 0.45) 0px 0px 15px 0px' : 'none')};
+  box-shadow: ${({ scrolled }) =>
+    scrolled
+      ? 'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px'
+      : 'none'};
   top: 0;
   z-index: 10;
   transition: all 1.5s ease;
@@ -85,7 +88,7 @@ export const Registration = styled.div`
 `;
 export const RegistrationItem = styled.div`
   font-weight: 600;
-  margin-right: 10px;
+  margin-right: 20px;
   &:nth-child(2) {
     margin-right: 0;
   }

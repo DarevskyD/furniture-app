@@ -41,10 +41,10 @@ const SelectedProduct = () => {
             wide seat is complemented by a slanted, slatted backrest adding a twist to this classic
             design to create a Scandi-inspired look. Pair them with a table in the dining room, or
             enjoy them on their own in the kitchen or living room.
-          </Description>          
+          </Description>
           <PriceContainer>
             <PriceTitle>Price:</PriceTitle>
-            <Price>120$</Price>            
+            <Price>120$</Price>
           </PriceContainer>
           <FilterContainer>
             <FilterTitle>Color:</FilterTitle>
@@ -67,8 +67,8 @@ const SelectedProduct = () => {
                 </IconContainer>
               </ChangeQuantityBlock>
             </QuantityContainer>
-            <AddToCart>ADD TO CART</AddToCart>
           </AmountContainer>
+          <AddToCart>ADD TO CART</AddToCart>
         </InfoContainer>
       </Wrapper>
     </Container>

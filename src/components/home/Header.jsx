@@ -1,3 +1,4 @@
+import { theme } from '../../styles/Theme';
 import { useState, useEffect } from 'react';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -52,16 +53,16 @@ const Header = () => {
         <RightNav>
           <Language>EN</Language>
           <Registration>
-            <RegistrationItem>REGISTRATION</RegistrationItem>
             <RegistrationItem>LOGIN</RegistrationItem>
+            <RegistrationItem>SIGN IN</RegistrationItem>
           </Registration>
           <Cart>
             <Badge
               badgeContent={1}
               sx={{
                 '& .MuiBadge-badge': {
-                  color: '#ffffff',
-                  backgroundColor: '#ff5a5a',
+                  color: theme.colors.light,
+                  backgroundColor: theme.colors.additionalMd,
                 },
               }}>
               <ShoppingCartOutlinedIcon />

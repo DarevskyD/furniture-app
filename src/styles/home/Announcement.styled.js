@@ -1,13 +1,6 @@
-import styled from "styled-components";
-import { size } from "../BreakPoints";
+import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  max-width: ${size.lg};
-  margin: 0 auto;
-  padding: 10px 0;
-  text-align: center;
-`;
-
-export const Title = styled.p`
-  color: ${({theme}) => theme.colors.light};
+export const Title = styled.marquee`
+  color: ${({ theme }) => theme.colors.light};
+  letter-spacing: 1px;
 `;

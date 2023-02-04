@@ -22,6 +22,9 @@ export const Image = styled.img`
 
 export const InfoContainer = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 
 export const Title = styled.h2`
@@ -70,12 +73,17 @@ export const FilterColorContainer = styled.div`
   align-items: center;
 `;
 export const FilterColor = styled.div`
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   margin: 0 10px 0 0;
   border-radius: 50%;
   background-color: ${({ color }) => color};
+  border: 1px solid ${({ color }) => color};
   cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 export const AmountContainer = styled.div``;
@@ -115,5 +123,12 @@ export const Amount = styled.div`
 
 export const AddToCart = styled.button`
   padding: 10px;
+  margin-top: auto;
   border: 1px solid ${({ theme }) => theme.colors.primary};
+  transition: all 0.5s ease;
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.colors.additionalMd};
+    background-color: ${({ theme }) => theme.colors.additionalMd};
+    color: ${({ theme }) => theme.colors.light};
+  }
 `;

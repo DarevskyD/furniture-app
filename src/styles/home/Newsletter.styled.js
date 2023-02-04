@@ -43,6 +43,6 @@ export const Input = styled.input`
 export const Button = styled.button`
   flex: 1;
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.additional};
+  background-color: ${({ theme }) => theme.colors.additionalMd};
   color: ${({ theme }) => theme.colors.light};
 `;
