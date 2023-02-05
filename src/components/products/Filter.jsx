@@ -1,4 +1,4 @@
-import { Container } from '../../styles/Container.styled';
+import { Container } from '../../styles/universal/Container.styled';
 import {
   Wrapper,
   Title,

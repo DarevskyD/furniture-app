@@ -3,7 +3,8 @@ import { useState } from 'react';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
 import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
 
-import { Container } from '../../styles/Container.styled';
+import { Container } from '../../styles/universal/Container.styled';
+import { InfoButton } from '../../styles/universal/Button.styled';
 import {
   Wrapper,
   Arrow,
@@ -15,8 +16,8 @@ import {
   InfoWrapper,
   Title,
   Text,
-  Button,
 } from '../../styles/home/Slider.styled';
+
 import { sliderItems } from '../../data';
 
 const Slider = () => {
@@ -47,7 +48,7 @@ const Slider = () => {
                 <InfoWrapper>
                   <Title>{item.title}</Title>
                   <Text>{item.text}</Text>
-                  <Button>SHOW NOW</Button>
+                  <InfoButton>SHOW NOW</InfoButton>
                 </InfoWrapper>
               </InfoContainer>
             </Slide>

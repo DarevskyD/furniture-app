@@ -120,15 +120,3 @@ export const Amount = styled.div`
   font-weight: 500;
   margin: 0 10px;
 `;
-
-export const AddToCart = styled.button`
-  padding: 10px;
-  margin-top: auto;
-  border: 1px solid ${({ theme }) => theme.colors.primary};
-  transition: all 0.5s ease;
-  &:hover {
-    border: 1px solid ${({ theme }) => theme.colors.additionalMd};
-    background-color: ${({ theme }) => theme.colors.additionalMd};
-    color: ${({ theme }) => theme.colors.light};
-  }
-`;

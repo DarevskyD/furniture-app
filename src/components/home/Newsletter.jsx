@@ -1,5 +1,5 @@
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import { Container } from '../../styles/Container.styled';
+import { Container } from '../../styles/universal/Container.styled';
 import {
   Wrapper,
   Title,

@@ -74,9 +74,3 @@ export const Text = styled.p`
   margin: 0 0 30px;
   letter-spacing: 2px;
 `;
-
-export const Button = styled.button`
-  padding: 10px;
-  font-size: 30px;
-  border: 1px solid ${({theme}) => theme.colors.primary};
-`;

@@ -40,9 +40,3 @@ export const Title = styled.h2`
   background-color: ${({ theme }) => theme.colors.light};
   opacity: 0.8;
 `;
-
-export const Button = styled.button`
-  padding: 10px;
-  font-weight: 500;
-  border: 1px solid ${({ theme }) => theme.colors.light};
-`;

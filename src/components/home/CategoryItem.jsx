@@ -1,4 +1,5 @@
-import { ItemContainer, Image, Info, Title, Button } from '../../styles/home/CategoryItem.styled';
+import { ItemContainer, Image, Info, Title } from '../../styles/home/CategoryItem.styled';
+import { Button } from '../../styles/universal/Button.styled';
 
 const CategoryItem = ({ item }) => {
   const { img, title } = item;

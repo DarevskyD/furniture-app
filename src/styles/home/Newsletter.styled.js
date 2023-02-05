@@ -24,7 +24,7 @@ export const Description = styled.p`
 `;
 
 export const InputContainer = styled.div`
-  width: 50%;  
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,6 +43,6 @@ export const Input = styled.input`
 export const Button = styled.button`
   flex: 1;
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.additionalMd};
   color: ${({ theme }) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.additionalMd};
 `;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { theme } from '../Theme';
 import { size } from '../BreakPoints';
 
 export const Wrapper = styled.div`
@@ -26,17 +25,6 @@ export const Top = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 0 20px;
-`;
-
-export const TopButton = styled.button`
-  padding: 10px 15px;
-  font-size: 20px;
-  font-weight: 300;
-  background-color: ${({ color }) =>
-    color === 'primary' ? theme.colors.primary : theme.colors.light};
-  border: 1px solid
-    ${({ color }) => (color === 'primary' ? theme.colors.primary : theme.colors.primary)};
-  color: ${({ color }) => (color === 'primary' ? theme.colors.light : theme.colors.primary)}; ;
 `;
 
 export const TopWrapper = styled.div``;
@@ -173,13 +161,3 @@ export const SummaryItem = styled.div`
 `;
 export const SummaryItemText = styled.p``;
 export const SummaryItemPrice = styled.span``;
-
-export const Button = styled.button`
-  padding: 10px 15px;
-  font-size: 20px;
-  font-weight: 300;
-  background-color: ${({ theme }) => theme.colors.additionalMd};
-  border: 1px solid ${({ theme }) => theme.colors.additionalMd};
-  color: ${({ theme }) => theme.colors.light};
-  margin-top: auto;
-`;

@@ -55,12 +55,3 @@ export const Input = styled.input`
 export const Agreement = styled.p`
   margin: 20px 0;
 `;
-
-export const Button = styled.button`
-  margin: 0 auto;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: 300;
-  color: ${({ theme }) => theme.colors.light};
-  background-color: ${({ theme }) => theme.colors.additionalMd};
-`;

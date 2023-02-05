@@ -1,5 +1,8 @@
 import { theme } from '../../styles/Theme';
-import { Container } from '../../styles/Container.styled';
+
+import { Container } from '../../styles/universal/Container.styled';
+import { CreateButton } from '../../styles/universal/Button.styled';
+
 import {
   Wrapper,
   FormContainer,
@@ -7,7 +10,6 @@ import {
   Form,
   Input,
   Agreement,
-  Button,
 } from '../../styles/register/LogIn.styled';
 
 const LogIn = () => {
@@ -27,7 +29,7 @@ const LogIn = () => {
               By creating an account, I consent to the processing of my personal data in accordance
               with the <b>PRIVACY POLICY</b>
             </Agreement>
-            <Button>CREATE</Button>
+            <CreateButton>CREATE</CreateButton>
           </Form>
         </FormContainer>
       </Wrapper>

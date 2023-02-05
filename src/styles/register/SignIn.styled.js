@@ -52,16 +52,6 @@ export const Input = styled.input`
   transition: all 0.5s ease;
 `;
 
-export const Button = styled.button`
-  margin: 0 auto 20px;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: 300;
-  border: none;
-  color: ${({ theme }) => theme.colors.light};
-  background-color: ${({ theme }) => theme.colors.additionalMd};
-`;
-
 export const Link = styled.a`
   margin: 0 0 5px;
   font-size: 14px;

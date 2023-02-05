@@ -7,9 +7,7 @@ export const Container = styled.header`
   background-color: ${({ scrolled }) => (scrolled ? theme.colors.lightBg : theme.colors.light)};
   position: ${({ scrolled }) => (scrolled ? 'sticky' : null)};
   box-shadow: ${({ scrolled }) =>
-    scrolled
-      ? 'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px'
-      : 'none'};
+    scrolled ? 'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px' : 'none'};
   top: 0;
   z-index: 10;
   transition: all 1.5s ease;
@@ -86,6 +84,7 @@ export const Language = styled.div`
 export const Registration = styled.div`
   display: flex;
 `;
+
 export const RegistrationItem = styled.div`
   font-weight: 600;
   margin-right: 20px;

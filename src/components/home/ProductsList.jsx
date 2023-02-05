@@ -1,5 +1,5 @@
 import ProductItem from './ProductItem';
-import { Container } from '../../styles/Container.styled';
+import { Container } from '../../styles/universal/Container.styled';
 import { Wrapper } from '../../styles/home/ProductsList.styled';
 
 import { products } from '../../data';

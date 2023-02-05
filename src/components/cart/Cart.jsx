@@ -1,13 +1,16 @@
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
+
 import { theme } from '../../styles/Theme';
-import { Container } from '../../styles/Container.styled';
+
+import { Container } from '../../styles/universal/Container.styled';
+import { TopButton, CheckoutButton } from '../../styles/universal/Button.styled';
+
 import {
   Wrapper,
   CartContainer,
   Title,
   Top,
-  TopButton,
   TopWrapper,
   ShoppingBag,
   WishList,
@@ -31,8 +34,7 @@ import {
   SummaryItem,
   SummaryItemText,
   SummaryItemPrice,
-  Button,
-} from '../../styles/Cart/Cart.styled';
+} from '../../styles/cart/Cart.styled';
 
 const Cart = () => {
   return (
@@ -124,7 +126,7 @@ const Cart = () => {
                 <SummaryItemText>Total:</SummaryItemText>
                 <SummaryItemPrice>$ 180</SummaryItemPrice>
               </SummaryItem>
-              <Button>CHECKOUT NOW</Button>
+              <CheckoutButton>CHECKOUT NOW</CheckoutButton>
             </Summary>
           </Bottom>
         </CartContainer>

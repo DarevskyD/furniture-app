@@ -1,7 +1,8 @@
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 
-import { Container } from '../../styles/Container.styled';
+import { Container } from '../../styles/universal/Container.styled';
+import { AddToCart } from '../../styles/universal/Button.styled';
 
 import {
   Wrapper,
@@ -22,8 +23,7 @@ import {
   QuantityContainer,
   QuantityTitle,
   ChangeQuantityBlock,
-  Amount,
-  AddToCart,
+  Amount,  
 } from '../../styles/products/SelectedProduct.styled';
 
 const SelectedProduct = () => {
