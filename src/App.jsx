@@ -15,11 +15,11 @@ const App = () => {
       <>
         <GlobalStyles />
         <Home />
-        <Products />
+        {/* <Products />
         <Product />
         <LogInPage />
         <SignInPage />
-        <CartPage />
+        <CartPage /> */}
       </>
     </ThemeProvider>
   );

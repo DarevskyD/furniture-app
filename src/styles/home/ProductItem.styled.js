@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Info = styled.div`
   width: 100%;
   height: 100%;
-  background-color: ${({theme}) => theme.colors.secOverlay};
+  background-color: ${({ theme }) => theme.colors.secOverlay};
   position: absolute;
   top: 0;
   left: 0;

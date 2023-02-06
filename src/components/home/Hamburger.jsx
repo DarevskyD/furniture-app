@@ -6,10 +6,10 @@ import {
   BottomLine,
 } from '../../styles/home/Hamburger.styled';
 
-const Hamburger = () => {
+const Hamburger = ({scrolled}) => {
   return (
     <>
-      <HamburgerMenu>
+      <HamburgerMenu scrolled={scrolled}>
         <HamburgerMenuLines>
           <TopLine />
           <CenterLine />

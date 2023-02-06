@@ -14,21 +14,22 @@ import {
   Description,
   SocialContainer,
   SocialLink,
-  CenterAbout,
+  Right,
+  RightAbout,
   Title,
   AboutUs,
   AboutUsItem,
   AboutUsLink,
-  CenterHelp,
+  RightHelp,
   Help,
   HelpTitle,
   HelpItem,
   HelpLink,
-  Right,
+  RightContact,
   Contact,
   ContactTitle,
   ContactItem,
-  ContactLink,  
+  ContactLink,
 } from '../../styles/home/Footer.styled';
 
 const Footer = () => {
@@ -57,62 +58,64 @@ const Footer = () => {
             </SocialLink>
           </SocialContainer>
         </Left>
-        <CenterAbout>
-          <Title>About Us</Title>
-          <AboutUs>
-            <AboutUsItem>
-              <AboutUsLink href="#">About Target</AboutUsLink>
-            </AboutUsItem>
-            <AboutUsItem>
-              <AboutUsLink href="#">Careers</AboutUsLink>
-            </AboutUsItem>
-            <AboutUsItem>
-              <AboutUsLink href="#">News & Blog</AboutUsLink>
-            </AboutUsItem>
-            <AboutUsItem>
-              <AboutUsLink href="#">Target Brands</AboutUsLink>
-            </AboutUsItem>
-            <AboutUsItem>
-              <AboutUsLink href="#">Affiliates & Partners</AboutUsLink>
-            </AboutUsItem>
-          </AboutUs>
-        </CenterAbout>
-        <CenterHelp>
-          <HelpTitle>Help</HelpTitle>
-          <Help>
-            <HelpItem>
-              <HelpLink href="#">Target Help</HelpLink>
-            </HelpItem>
-            <HelpItem>
-              <HelpLink href="#">Returns</HelpLink>
-            </HelpItem>
-            <HelpItem>
-              <HelpLink href="#">Track Orders</HelpLink>
-            </HelpItem>
-            <HelpItem>
-              <HelpLink href="#">Feedback</HelpLink>
-            </HelpItem>
-            <HelpItem>
-              <HelpLink href="#">Recalls</HelpLink>
-            </HelpItem>
-          </Help>
-        </CenterHelp>
         <Right>
-          <ContactTitle>Contact Us</ContactTitle>
-          <Contact>
-            <ContactItem>
-              <RoomOutlinedIcon />
-              <ContactLink href="#">via Brescia 65, 56740, Desio</ContactLink>
-            </ContactItem>
-            <ContactItem>
-              <PhoneIcon />
-              <ContactLink href="tel:123-456-7890p123">+123-456-7890p123</ContactLink>
-            </ContactItem>
-            <ContactItem>
-              <EmailOutlinedIcon />
-              <ContactLink href="mailto:info@f_disign.com">info@f_disign.com</ContactLink>
-            </ContactItem>
-          </Contact>
+          <RightAbout>
+            <Title>About Us</Title>
+            <AboutUs>
+              <AboutUsItem>
+                <AboutUsLink href="#">About Target</AboutUsLink>
+              </AboutUsItem>
+              <AboutUsItem>
+                <AboutUsLink href="#">Careers</AboutUsLink>
+              </AboutUsItem>
+              <AboutUsItem>
+                <AboutUsLink href="#">News & Blog</AboutUsLink>
+              </AboutUsItem>
+              <AboutUsItem>
+                <AboutUsLink href="#">Target Brands</AboutUsLink>
+              </AboutUsItem>
+              <AboutUsItem>
+                <AboutUsLink href="#">Affiliates & Partners</AboutUsLink>
+              </AboutUsItem>
+            </AboutUs>
+          </RightAbout>
+          <RightHelp>
+            <HelpTitle>Help</HelpTitle>
+            <Help>
+              <HelpItem>
+                <HelpLink href="#">Target Help</HelpLink>
+              </HelpItem>
+              <HelpItem>
+                <HelpLink href="#">Returns</HelpLink>
+              </HelpItem>
+              <HelpItem>
+                <HelpLink href="#">Track Orders</HelpLink>
+              </HelpItem>
+              <HelpItem>
+                <HelpLink href="#">Feedback</HelpLink>
+              </HelpItem>
+              <HelpItem>
+                <HelpLink href="#">Recalls</HelpLink>
+              </HelpItem>
+            </Help>
+          </RightHelp>
+          <RightContact>
+            <ContactTitle>Contact Us</ContactTitle>
+            <Contact>
+              <ContactItem>
+                <RoomOutlinedIcon />
+                <ContactLink href="#">via Brescia 65, 56740, Desio</ContactLink>
+              </ContactItem>
+              <ContactItem>
+                <PhoneIcon />
+                <ContactLink href="tel:123-456-7890p123">+123-456-7890p123</ContactLink>
+              </ContactItem>
+              <ContactItem>
+                <EmailOutlinedIcon />
+                <ContactLink href="mailto:info@f_disign.com">info@f_disign.com</ContactLink>
+              </ContactItem>
+            </Contact>
+          </RightContact>
         </Right>
       </Wrapper>
     </Container>

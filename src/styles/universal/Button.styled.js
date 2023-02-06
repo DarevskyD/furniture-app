@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../Theme';
+import { device } from '../BreakPoints';
 
 export const Button = styled.button`
   padding: 10px 20px;
@@ -10,6 +11,9 @@ export const Button = styled.button`
 
 export const InfoButton = styled(Button)`
   font-size: 30px;
+  @media only screen and (${device.lg}) {
+    font-size: 20px;
+  }
 `;
 
 export const AddToCart = styled(Button)`
@@ -51,5 +55,3 @@ export const CheckoutButton = styled(Button)`
   border: 1px solid ${({ theme }) => theme.colors.additionalMd};
   background-color: ${({ theme }) => theme.colors.additionalMd};
 `;
-
-

@@ -1,17 +1,15 @@
 export const size = {
-  xs: '400px', // for small screen mobile
-  sm: '600px', // for mobile screen
-  md: '900px', // for tablets
-  lg: '1280px', // for laptops
-  // xl: '1440px', // for desktop / monitors
-  // xxl: '1920px', // for big screens
+  xs: 480, // smartphones, portrait iPhone, portrait 480x320 phones (Android)
+  sm: 600, // smartphones, Android phones, landscape iPhone
+  md: 800, // portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android)
+  lg: 1024, // tablet, landscape iPad, lo-res laptops ands desktops
+  xl: 1280, // big landscape tablets, laptops, and desktops
 };
 
 export const device = {
-  xs: `(max-width: ${size.xs})`,
-  sm: `(max-width: ${size.sm})`,
-  md: `(max-width: ${size.md})`,
-  lg: `(max-width: ${size.lg})`,
-  // xl: `(max-width: ${size.xl})`,
-  // xxl: `(max-width: ${size.xxl})`,
+  xs: `(max-width: ${size.xs}px)`,
+  sm: `(max-width: ${size.sm}px)`,
+  md: `(max-width: ${size.md}px)`,
+  lg: `(max-width: ${size.lg}px)`,
+  xl: `(max-width: ${size.xl}px)`,
 };

@@ -1,21 +1,28 @@
 import styled from 'styled-components';
+import { device } from '../BreakPoints';
 
 export const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 1s ease; 
+  transition: all 1s ease;
 `;
 
 export const ItemContainer = styled.div`
   flex: 1;
-  min-width: 370px;
+  min-width: 280px;
   height: 70vh;
   margin: 5px;
   position: relative;
   overflow: hidden;
-  &:hover ${Image}{
+  &:hover ${Image} {
     transform: scale(1.1);
+  }
+  @media only screen and (${device.md}) {
+    height: 50vh;
+  }
+  @media only screen and (${device.sm}) {
+    height: 40vh;
   }
 `;
 

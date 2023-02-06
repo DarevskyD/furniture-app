@@ -3,9 +3,9 @@ import { useState } from 'react';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
 import KeyboardArrowRightOutlinedIcon from '@mui/icons-material/KeyboardArrowRightOutlined';
 
-import { Container } from '../../styles/universal/Container.styled';
 import { InfoButton } from '../../styles/universal/Button.styled';
 import {
+  Container,
   Wrapper,
   Arrow,
   WrapperSlide,

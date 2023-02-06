@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { device } from '../BreakPoints';
 
 export const HamburgerMenu = styled.div`
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 60px;
@@ -9,6 +9,13 @@ export const HamburgerMenu = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   cursor: pointer;
   display: none;
+  transition: all 0.5s ease;
+  @media only screen and (${device.md}) {
+    display: flex;
+    margin: 0 20px 0 0;
+    width: ${({ scrolled }) => scrolled && '70px'};
+    height: ${({ scrolled }) => scrolled && '70px'};
+  }
 `;
 
 export const HamburgerMenuLines = styled.div`

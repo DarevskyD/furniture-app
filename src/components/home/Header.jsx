@@ -1,5 +1,5 @@
-import { theme } from '../../styles/Theme';
 import { useState, useEffect } from 'react';
+import { theme } from '../../styles/Theme';
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
@@ -36,7 +36,7 @@ const Header = () => {
     <Container scrolled={scrolled}>
       <Wrapper>
         <LeftNav>
-          <Hamburger />
+          <Hamburger scrolled={scrolled} />
           <Logo>F_DESIGN</Logo>
         </LeftNav>
         <MainNav>
