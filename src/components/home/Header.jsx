@@ -4,6 +4,8 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import Hamburger from './Hamburger';
+import Sitebar from './Sitebar';
+
 import {
   Container,
   Wrapper,
@@ -34,7 +36,8 @@ const Header = () => {
 
   return (
     <Container scrolled={scrolled}>
-      <Wrapper>
+      <Sitebar />
+      <Wrapper scrolled={scrolled}>
         <LeftNav>
           <Hamburger scrolled={scrolled} />
           <Logo>F_DESIGN</Logo>

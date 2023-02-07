@@ -3,6 +3,7 @@ import { size, device } from '../BreakPoints';
 import { theme } from '../Theme';
 
 export const Container = styled.header`
+  position: relative;
   width: 100%;
   background-color: ${({ scrolled }) => (scrolled ? theme.colors.lightBg : theme.colors.light)};
   position: ${({ scrolled }) => (scrolled ? 'sticky' : null)};
@@ -10,7 +11,10 @@ export const Container = styled.header`
     scrolled ? 'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px' : 'none'};
   top: 0;
   z-index: 10;
-  transition: all 1.5s ease;
+  transition: all 1s ease;
+  @media only screen and (${device.md}) {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -20,15 +24,20 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
+  z-index: 10;
   @media only screen and (${device.md}) {
+    background-color: ${({ scrolled }) => (scrolled ? theme.colors.lightBg : theme.colors.light)};
     padding: 0 20px 0 0;
-  } 
+  }
 `;
 
 export const LeftNav = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 1;
 `;
 
 export const Logo = styled.h1`
@@ -42,16 +51,25 @@ export const MainNav = styled.nav`
   flex: 2;
   display: flex;
   align-items: center;
+  justify-content: center;
   @media only screen and (${device.md}) {
-    display: none;
+    height: auto;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    flex-direction: column;
   }
 `;
 
 export const MenuItemWrapper = styled.span`
+  display: flex;
   position: relative;
-  margin-right: 30px;
+  margin: 0 30px 0 0;
   @media only screen and (${device.md}) {
-    margin-right: 20px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0 0 30px;
   }
 `;
 
@@ -62,9 +80,6 @@ export const MenuItem = styled.a`
   &:after {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: -3px;
     left: 0;
     background-color: ${({ theme }) => theme.colors.primary};
     transform: scaleX(0);
@@ -73,8 +88,30 @@ export const MenuItem = styled.a`
   }
   &:hover {
     &:after {
+      width: 100%;
+      height: 1px;
+      bottom: -3px;
       transform-origin: bottom left;
       transform: scaleX(1);
+    }
+  }
+
+  @media only screen and (${device.md}) {
+    color: ${({ theme }) => theme.colors.light};
+    padding: 0 0 0 10px;
+    &:after {
+      top: 0;
+      background-color: ${({ theme }) => theme.colors.light};
+      transform: scaleY(0);
+      transform-origin: left bottom;
+    }
+    &:hover {
+      &:after {
+        width: 1px;
+        height: 100%;
+        transform-origin: left top;
+        transform: scaleY(1);
+      }
     }
   }
 `;
@@ -94,10 +131,13 @@ export const Language = styled.div`
   margin: 0 20px 0 0;
   cursor: pointer;
   @media only screen and (${device.sm}) {
-    margin: 0 10px 0 0;
-  }
-  @media only screen and (${device.xs}) {
-    display: none;
+    position: absolute;
+    top: 365px;
+    left: 30px;
+    color: ${({ theme }) => theme.colors.light};
+    font-size: 24px;
+    font-weight: 300;
+    padding: 0 0 0 10px;
   }
 `;
 
@@ -107,10 +147,11 @@ export const Registration = styled.div`
     margin: 0 20px 0 0;
   }
   @media only screen and (${device.sm}) {
-    margin: 0 10px 0 0;
-  }
-  @media only screen and (${device.xs}) {
-    display: none;
+    position: absolute;
+    top: 260px;
+    left: 30px;
+    flex-direction: column;
+    margin: 0px;
   }
 `;
 
@@ -122,7 +163,14 @@ export const RegistrationItem = styled.div`
   }
   cursor: pointer;
   @media only screen and (${device.md}) {
-    margin-right: 10px;    
+    margin-right: 10px;
+  }
+  @media only screen and (${device.sm}) {
+    color: ${({ theme }) => theme.colors.light};
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0 0 30px;
+    padding: 0 0 0 10px;
   }
 `;
 

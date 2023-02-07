@@ -20,7 +20,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primary}; 
 }
 
 h1,
@@ -60,7 +60,11 @@ html:focus-within {
 }
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;  
+}
+
+a, button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* Make images easier to work with */
