@@ -1,3 +1,4 @@
+//import { useState } from 'react';
 import {
   HamburgerMenu,
   HamburgerMenuLines,
@@ -6,14 +7,15 @@ import {
   BottomLine,
 } from '../../styles/home/Hamburger.styled';
 
-const Hamburger = ({scrolled}) => {
+const Hamburger = ({ toggle, scrolled, toggleClick }) => {  
+
   return (
     <>
-      <HamburgerMenu scrolled={scrolled}>
+      <HamburgerMenu scrolled={scrolled} onClick={() => toggleClick()}>
         <HamburgerMenuLines>
-          <TopLine />
-          <CenterLine />
-          <BottomLine />
+          <TopLine toggle={toggle} />
+          <CenterLine toggle={toggle} />
+          <BottomLine toggle={toggle} />
         </HamburgerMenuLines>
       </HamburgerMenu>
     </>

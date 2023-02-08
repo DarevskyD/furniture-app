@@ -20,7 +20,8 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
-  color: ${({ theme }) => theme.colors.primary}; 
+  color: ${({ theme }) => theme.colors.primary};
+  overflow: ${({ toggle }) => (toggle ? 'hidden' : 'visible')};
 }
 
 h1,

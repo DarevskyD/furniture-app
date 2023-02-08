@@ -18,6 +18,9 @@ export const ItemContainer = styled.div`
   &:hover ${Image} {
     transform: scale(1.1);
   }
+  @media only screen and (${device.lg}) {
+    height: 50vh;
+  }
   @media only screen and (${device.md}) {
     height: 50vh;
   }

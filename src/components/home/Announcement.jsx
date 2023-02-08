@@ -4,7 +4,7 @@ import { theme } from '../../styles/Theme';
 
 const Announcement = () => {
   return (
-    <Container bg={theme.colors.primary} padding="10px 0">
+    <Container bg={theme.colors.primary} padding="10px 0" zindex="3" position="relative">
       <Title>Super Deal! Free shipping on Orders Over $100</Title>
     </Container>
   );

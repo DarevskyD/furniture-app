@@ -21,7 +21,7 @@ import {
   Cart,
 } from '../../styles/home/Header.styled';
 
-const Header = () => {
+const Header = ({ toggle, toggleClick, handleClick }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -36,13 +36,13 @@ const Header = () => {
 
   return (
     <Container scrolled={scrolled}>
-      <Sitebar />
+      <Sitebar toggle={toggle} />
       <Wrapper scrolled={scrolled}>
         <LeftNav>
-          <Hamburger scrolled={scrolled} />
+          <Hamburger toggle={toggle} scrolled={scrolled} toggleClick={toggleClick} />
           <Logo>F_DESIGN</Logo>
         </LeftNav>
-        <MainNav>
+        <MainNav toggle={toggle} onClick={(e) => handleClick(e)}>
           <MenuItemWrapper>
             <MenuItem href="#">HOME</MenuItem>
           </MenuItemWrapper>
@@ -54,8 +54,8 @@ const Header = () => {
           </MenuItemWrapper>
         </MainNav>
         <RightNav>
-          <Language>EN</Language>
-          <Registration>
+          <Language toggle={toggle}>EN</Language>
+          <Registration toggle={toggle}>
             <RegistrationItem>LOGIN</RegistrationItem>
             <RegistrationItem>SIGN IN</RegistrationItem>
           </Registration>

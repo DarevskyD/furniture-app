@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
   }
   @media only screen and (${device.lg}) {
     max-width: ${size.md}px;
-    height: calc(80vh - 70px);
+    height: calc(70vh - 70px);
   }
   @media only screen and (${device.md}) {
     max-width: ${size.sm}px;
@@ -43,7 +43,7 @@ export const Arrow = styled.div`
   margin: auto;
   opacity: 0.5;
   cursor: pointer;
-  z-index: 5;
+  z-index: 1;
   @media only screen and (${device.lg}) {
     width: 50px;
     height: 50px;
@@ -80,7 +80,7 @@ export const ImgContainer = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  height: 100%;  
+  height: 100%;
 `;
 
 export const InfoContainer = styled.div`

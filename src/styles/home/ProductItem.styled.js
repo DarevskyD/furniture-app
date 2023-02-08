@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../BreakPoints';
 
 export const Info = styled.div`
   width: 100%;
@@ -7,12 +8,15 @@ export const Info = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: all 0.5s ease;
+  @media only screen and (${device.md}) {
+    opacity: 1;
+  }
 `;
 
 export const Container = styled.div`

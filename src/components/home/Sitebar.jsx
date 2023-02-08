@@ -1,7 +1,11 @@
-import { SitebarContainer } from '../../styles/home/Sitebar.styled';
+import { SitebarContainer, OverlayWrapper } from '../../styles/home/Sitebar.styled';
 
-const Sitebar = () => {
-  return <SitebarContainer></SitebarContainer>;
+const Sitebar = ({ toggle }) => {
+  return (
+    <OverlayWrapper openSitebar={toggle}>
+      <SitebarContainer openSitebar={toggle}></SitebarContainer>;
+    </OverlayWrapper>
+  );
 };
 
 export default Sitebar;

@@ -10,7 +10,7 @@ export const Container = styled.header`
   box-shadow: ${({ scrolled }) =>
     scrolled ? 'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px' : 'none'};
   top: 0;
-  z-index: 10;
+  z-index: 2;
   transition: all 1s ease;
   @media only screen and (${device.md}) {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -53,6 +53,8 @@ export const MainNav = styled.nav`
   align-items: center;
   justify-content: center;
   @media only screen and (${device.md}) {
+    opacity: ${({ toggle }) => (toggle ? '1' : '0')};
+    transition: ${({ toggle }) => (toggle ? 'opacity 2s ease' : 'none')};
     height: auto;
     position: absolute;
     top: 100px;
@@ -131,6 +133,8 @@ export const Language = styled.div`
   margin: 0 20px 0 0;
   cursor: pointer;
   @media only screen and (${device.sm}) {
+    opacity: ${({ toggle }) => (toggle ? '1' : '0')};
+    transition: ${({ toggle }) => (toggle ? 'opacity 2s ease' : 'none')};
     position: absolute;
     top: 365px;
     left: 30px;
@@ -147,6 +151,8 @@ export const Registration = styled.div`
     margin: 0 20px 0 0;
   }
   @media only screen and (${device.sm}) {
+    opacity: ${({ toggle }) => (toggle ? '1' : '0')};
+    transition: ${({ toggle }) => (toggle ? 'opacity 2s ease' : 'none')};
     position: absolute;
     top: 260px;
     left: 30px;
