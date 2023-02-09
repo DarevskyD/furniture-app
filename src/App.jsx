@@ -18,10 +18,7 @@ const App = () => {
   };
 
   const handleClick = (e) => {
-    if (
-      e.target.classList.value === 'sc-cwSeag dzwSZS' ||
-      (e.target.classList.value === 'sc-cVtpRj KFjeL' && window.innerWidth <= '800')
-    ) {
+    if (e.target.classList.value === 'sc-cwSeag dzwSZS' && window.innerWidth <= '800') {
       setToggle(!toggle);
     }
   };
@@ -33,9 +30,9 @@ const App = () => {
         <Home toggle={toggle} toggleClick={toggleClick} handleClick={(e) => handleClick(e)} />
         <Products toggle={toggle} toggleClick={toggleClick} handleClick={(e) => handleClick(e)} />
         <Product toggle={toggle} toggleClick={toggleClick} handleClick={(e) => handleClick(e)} />
-        <LogInPage toggle={toggle} toggleClick={toggleClick} handleClick={(e) => handleClick(e)}/>
-        <SignInPage toggle={toggle} toggleClick={toggleClick} handleClick={(e) => handleClick(e)}/>
-        <CartPage toggle={toggle} toggleClick={toggleClick} handleClick={(e) => handleClick(e)}/>
+        <LogInPage toggle={toggle} toggleClick={toggleClick} handleClick={(e) => handleClick(e)} />
+        <SignInPage toggle={toggle} toggleClick={toggleClick} handleClick={(e) => handleClick(e)} />
+        <CartPage toggle={toggle} toggleClick={toggleClick} handleClick={(e) => handleClick(e)} />
       </>
     </ThemeProvider>
   );
