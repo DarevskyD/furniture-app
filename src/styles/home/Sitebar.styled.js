@@ -2,14 +2,20 @@ import styled from 'styled-components';
 import { device } from '../BreakPoints';
 
 export const OverlayWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: ${({ openSitebar }) => (openSitebar ? '100vw' : '0px')};
-  height: ${({ openSitebar }) => (openSitebar ? '100vh' : '0px')};
-  background-color: rgba(80, 80, 80, 0.4);
-  transition: all 0.5s;
-  z-index: 9;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  @media only screen and (${device.md}) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: ${({ openSitebar }) => (openSitebar ? '100vw' : '0px')};
+    height: ${({ openSitebar }) => (openSitebar ? '100vh' : '0px')};
+    background-color: rgba(80, 80, 80, 0.4);
+    opacity: 1;
+    transition: all 0.5s;
+    z-index: 9;
+  }
 `;
 
 export const SitebarContainer = styled.div`

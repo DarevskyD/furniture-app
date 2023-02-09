@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { size } from '../BreakPoints';
 
 export const Wrapper = styled.div`
-  max-width: ${size.xl};
+  max-width: ${size.xl}px;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;

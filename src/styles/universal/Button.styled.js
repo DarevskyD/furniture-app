@@ -47,6 +47,10 @@ export const TopButton = styled(Button)`
   background-color: ${({ color }) =>
     color === 'primary' ? theme.colors.primary : theme.colors.light};
   ${({ color }) => (color === 'primary' ? theme.colors.primary : theme.colors.primary)};
+  @media only screen and (${device.sm}) {
+    margin: 0 0 10px;
+    width: 250px;
+  }
 `;
 
 export const CheckoutButton = styled(Button)`

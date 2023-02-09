@@ -19,11 +19,13 @@ import {
   Product,
   Hr,
   ProductDetails,
+  ImageContainer,
   Image,
   Details,
   ProductName,
   ProductId,
   ProductColor,
+  Color,
   PriceDetails,
   ProductAmount,
   IconContainer,
@@ -54,7 +56,9 @@ const Cart = () => {
             <Info>
               <Product>
                 <ProductDetails>
-                  <Image src="https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                  <ImageContainer>
+                    <Image src="https://images.pexels.com/photos/963486/pexels-photo-963486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                  </ImageContainer>
                   <Details>
                     <ProductName>
                       <b>Product:</b>CHAIR BLACK
@@ -62,7 +66,10 @@ const Cart = () => {
                     <ProductId>
                       <b>ID:</b>9986049604
                     </ProductId>
-                    <ProductColor color={theme.colors.primary} />
+                    <ProductColor>
+                      <b>Color:</b>
+                      <Color color={theme.colors.primary} />
+                    </ProductColor>
                   </Details>
                 </ProductDetails>
                 <PriceDetails>
@@ -83,7 +90,9 @@ const Cart = () => {
 
               <Product>
                 <ProductDetails>
-                  <Image src="https://images.pexels.com/photos/2082092/pexels-photo-2082092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                  <ImageContainer>
+                    <Image src="https://images.pexels.com/photos/2082092/pexels-photo-2082092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+                  </ImageContainer>
                   <Details>
                     <ProductName>
                       <b>Product:</b>TABLE WHITE
@@ -91,7 +100,10 @@ const Cart = () => {
                     <ProductId>
                       <b>ID:</b>8640864004
                     </ProductId>
-                    <ProductColor color={theme.colors.light} />
+                    <ProductColor>
+                      <b>Color:</b>
+                      <Color color={theme.colors.light} />
+                    </ProductColor>
                   </Details>
                 </ProductDetails>
                 <PriceDetails>

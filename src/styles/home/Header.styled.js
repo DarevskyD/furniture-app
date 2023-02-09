@@ -55,6 +55,7 @@ export const MainNav = styled.nav`
   @media only screen and (${device.md}) {
     opacity: ${({ toggle }) => (toggle ? '1' : '0')};
     transition: ${({ toggle }) => (toggle ? 'opacity 2s ease' : 'none')};
+    display: ${({ toggle }) => (toggle ? 'flex' : 'none')};
     height: auto;
     position: absolute;
     top: 100px;
@@ -135,6 +136,7 @@ export const Language = styled.div`
   @media only screen and (${device.sm}) {
     opacity: ${({ toggle }) => (toggle ? '1' : '0')};
     transition: ${({ toggle }) => (toggle ? 'opacity 2s ease' : 'none')};
+    display: ${({ toggle }) => (toggle ? 'flex' : 'none')};
     position: absolute;
     top: 365px;
     left: 30px;
@@ -153,6 +155,7 @@ export const Registration = styled.div`
   @media only screen and (${device.sm}) {
     opacity: ${({ toggle }) => (toggle ? '1' : '0')};
     transition: ${({ toggle }) => (toggle ? 'opacity 2s ease' : 'none')};
+    display: ${({ toggle }) => (toggle ? 'flex' : 'none')};
     position: absolute;
     top: 260px;
     left: 30px;

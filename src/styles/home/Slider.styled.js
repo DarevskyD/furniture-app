@@ -3,12 +3,14 @@ import { size, device } from '../BreakPoints';
 
 export const Container = styled.div`
   width: 100%;
+  padding: 10px 0 0 0;
   @media only screen and (${device.sm}) {
     display: none;
   }
 `;
 
 export const Wrapper = styled.div`
+  height: 70vh;
   max-width: ${size.xl}px;
   height: calc(100vh - 70px);
   margin: 0 auto;
@@ -19,11 +21,11 @@ export const Wrapper = styled.div`
   }
   @media only screen and (${device.lg}) {
     max-width: ${size.md}px;
-    height: calc(70vh - 70px);
+    height: calc(80vh - 70px);
   }
   @media only screen and (${device.md}) {
     max-width: ${size.sm}px;
-    height: calc(70vh - 70px);
+    height: calc(65vh - 70px);
   }
 `;
 

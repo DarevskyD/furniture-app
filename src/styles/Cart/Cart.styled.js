@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { size } from '../BreakPoints';
+import { size, device } from '../BreakPoints';
 
 export const Wrapper = styled.div`
   max-width: ${size.xl};
@@ -25,9 +25,16 @@ export const Top = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 0 20px;
+  @media only screen and (${device.sm}) {
+    flex-direction: column;
+  }
 `;
 
-export const TopWrapper = styled.div``;
+export const TopWrapper = styled.div`
+  @media only screen and (${device.md}) {
+    display: none;
+  }
+`;
 
 export const ShoppingBag = styled.span`
   padding: 0 0 3px;
@@ -46,6 +53,9 @@ export const WishList = styled.span`
 export const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  @media only screen and (${device.md}) {
+    flex-direction: column;
+  }
 `;
 
 export const Info = styled.div`
@@ -56,6 +66,9 @@ export const Product = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  @media only screen and (${device.sm}) {
+    flex-direction: column;
+  }
 `;
 
 export const Hr = styled.hr`
@@ -67,34 +80,68 @@ export const Hr = styled.hr`
 export const ProductDetails = styled.div`
   flex: 2;
   display: flex;
+  @media only screen and (${device.lg}) {
+    flex: 4;
+  }
+  @media only screen and (${device.sm}) {
+    margin: 0 0 15px;
+  }
+  @media only screen and (${device.xs}) {
+    flex-direction: column;
+  }
+`;
+
+export const ImageContainer = styled.div`
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (${device.xs}) {
+    margin: 0 0 10px;
+  }
 `;
 
 export const Image = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 `;
 
 export const Details = styled.div`
+  flex: 1;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start; 
+  @media only screen and (${device.sm}) {
+    padding: 10px 10px 10px 20px;
+  }
 `;
 
 export const ProductName = styled.span`
+  margin: 0 0 15px;
   b {
     margin: 0 10px 0 0;
   }
 `;
 
 export const ProductId = styled.span`
+  margin: 0 0 15px;
   b {
     margin: 0 10px 0 0;
   }
 `;
 
 export const ProductColor = styled.div`
+  display: flex;
+  align-items: center;
+  b {
+    margin: 0 10px 0 0;
+  }
+`;
+
+export const Color = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -108,12 +155,25 @@ export const PriceDetails = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media only screen and (${device.sm}) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  @media only screen and (${device.xs}) {
+    justify-content: space-between;
+  }
 `;
 
 export const ProductAmount = styled.div`
   display: flex;
   align-items: center;
   margin: 0 0 20px;
+  @media only screen and (${device.sm}) {
+    margin: 0 30px 0 0;
+  }
+  @media only screen and (${device.xs}) {
+    padding: 0 0 0 20px;
+  }
 `;
 
 export const IconContainer = styled.div`
@@ -135,14 +195,13 @@ export const Amount = styled.div`
 
 export const ProductPrice = styled.div`
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
 `;
 
 export const Summary = styled.div`
   flex: 1;
   border: 0.5px solid ${({ theme }) => theme.colors.secondary};
   padding: 20px;
-  height: 50vh;
   display: flex;
   flex-direction: column;
 `;

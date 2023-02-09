@@ -1,23 +1,31 @@
 import styled from 'styled-components';
-import { size } from '../BreakPoints';
+import { size, device } from '../BreakPoints';
 
 export const Wrapper = styled.div`
-  max-width: ${size.xl};
+  max-width: ${size.xl}px;
   margin: 0 auto;
   padding: 40px 20px;
   display: flex;
+  @media only screen and (${device.md}) {
+    flex-direction: column;
+  }
+  @media only screen and (${device.md}) {
+    padding: 20px;
+  }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.div`  
+  height: 80vh;
   flex: 1;
   display: flex;
   justify-content: center;
+  padding: 20px;
 `;
 
 export const Image = styled.img`
-  width: 80%;
-  height: 90vh;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
 `;
 
 export const InfoContainer = styled.div`
@@ -25,12 +33,16 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 20px;
 `;
 
 export const Title = styled.h2`
   font-size: 40px;
   font-weight: 300;
   margin: 0 0 20px;
+  @media only screen and (${device.sm}) {
+    font-size: 30px;
+  }
 `;
 export const Description = styled.p`
   width: 80%;
@@ -38,6 +50,9 @@ export const Description = styled.p`
   font-weight: 300;
   line-height: 1.2;
   margin: 0 0 20px;
+  @media only screen and (${device.sm}) {
+    width: 100%;
+  }
 `;
 
 export const PriceContainer = styled.div`

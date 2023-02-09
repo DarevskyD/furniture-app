@@ -2,10 +2,9 @@ import styled from 'styled-components';
 import { size } from '../BreakPoints';
 
 export const Wrapper = styled.div`
-  max-width: ${size.xl};
-  height: 70vh;
+  max-width: ${size.xl}px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 60px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +12,6 @@ export const Wrapper = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  min-width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +31,7 @@ export const Form = styled.form`
   flex-direction: column;
 `;
 
-export const Input = styled.input`
-  flex: 1;
-  width: 100%;
+export const Input = styled.input`  
   margin: 0 0 10px;
   padding: 10px;
   outline: none;
